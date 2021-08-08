@@ -1,0 +1,60 @@
+@import "normalize.css";
+
+/*:root  伪类元素，用于获取根元素（即html）*/
+/* 在css中也可以使用变量*/
+
+/* 提前定义一些变量*/
+:root {
+    --color-text:#666;
+    /*--color-high-text:#ff5777;*//*项目原始颜色*/
+  --color-high-text:orangered;
+    /*tintColor:涂上去的颜色，设置背景颜色，用于导航的时候*/
+    /*--color-tint:#ff8198;*/ /*项目原始颜色*/
+    --color-tint: #e0620d;
+    --color-background:#fff;
+    --font-size:14px;
+    --line-height:1.5;
+}
+
+*,
+*::before,
+*::after {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    user-select: none;/* 禁止用户鼠标在页面上选中文字/图片等*/
+    -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，tap点击，hightlight背景高亮，color颜色，颜色用数值调节*/
+    background:var(--color-background);
+    color: var(--color-text);
+    width: 100vw;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.clear-fix::after {
+    clear:both;
+    content:'';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.clear-fix {
+    zoom:1;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
